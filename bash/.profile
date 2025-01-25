@@ -25,18 +25,18 @@ fi
 if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
+
+
+# Added by Toolbox App
+export PATH="$PATH:/home/dphov/.local/share/JetBrains/Toolbox/scripts"
+
 . "$HOME/.cargo/env"
+. "/home/dphov/.deno/env"
+
+export PATH=$PATH:/usr/local/go/bin
+
+# go installed apps
+
+export PATH=$PATH:/home/dphov/go/bin
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-
-# >>> coursier install directory >>>
-export PATH="$PATH:/home/dphov/.local/share/coursier/bin"
-# <<< coursier install directory <<<

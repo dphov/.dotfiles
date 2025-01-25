@@ -1,4 +1,4 @@
-#!/usr/bin/env zsh
+#/usr/bin/env zsh
 if [[ -z $STOW_FOLDERS ]]; then
      STOW_FOLDERS="x11,kitty,bash,zsh,bin,i3,nvim,tmux"
 fi
@@ -7,7 +7,7 @@ if [[ -z $DOTFILES ]]; then
    DOTFILES=$HOME/.dotfiles
 fi
 
-export STOW_FOLDERS=$STOW_FOLDERS 
+export STOW_FOLDERS=$STOW_FOLDERS
 export DOTFILES=$DOTFILES
 $DOTFILES/install
 
